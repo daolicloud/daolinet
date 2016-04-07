@@ -108,8 +108,8 @@ func (a *Api) gateways(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	var gateways []model.Gateway
-	var tmp_gateways []model.Gateway
+	gateways := []model.Gateway{}
+	tmp_gateways := []model.Gateway{}
 	for _, gw := range gateway {
 		var g model.Gateway
 		err := json.Unmarshal(gw.Value, &g)
