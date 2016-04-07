@@ -250,6 +250,11 @@ func (a *Api) Run() error {
 	globalMux.Handle("/v1.19/", swarmRouter)
 	globalMux.Handle("/v1.20/", swarmRouter)
 	globalMux.Handle("/v1.21/", swarmRouter)
+	globalMux.Handle("/v1.22/", swarmRouter)
+	globalMux.Handle("/v1.23/", swarmRouter)
+	globalMux.Handle("/v1.24/", swarmRouter)
+	globalMux.Handle("/v1.25/", swarmRouter)
+	globalMux.Handle("/v1.26/", swarmRouter)
 
 	log.Infof("controller listening on %s", a.listenAddr)
 
