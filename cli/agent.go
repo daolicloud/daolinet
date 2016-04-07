@@ -34,7 +34,7 @@ func agent(c *cli.Context) {
 	)
 	dflag := getDiscovery(c)
 	if dflag == "" {
-		log.Fatalf("discovery required to join a cluster. See '%s join --help'.", c.App.Name)
+		log.Fatalf("discovery required to connect a cluster. See '%s agent --help'.", c.App.Name)
 	}
 
 	ovs := netutils.NewOVS(c.String("bridge"))

@@ -76,7 +76,7 @@ func Run() {
 		{
 			Name:      "agent",
 			ShortName: "a",
-			Usage:     "join a docker cluster",
+			Usage:     "join manager cluster",
 			Action:    agent,
 			Flags: []cli.Flag{
 				cli.StringFlag{
