@@ -89,13 +89,17 @@ func Run() {
 					Usage: "discover address",
 				},
 				cli.StringFlag{
+					Name:  "iface",
+					Usage: "docker network interface(format <devname:ip>).",
+				},
+				/*cli.StringFlag{
 					Name:  "int-nic",
 					Usage: "internal network interface",
 				},
 				cli.StringFlag{
 					Name:  "ext-nic",
 					Usage: "public network interface",
-				},
+				},*/
 				flHeartBeat, flTTL, flDiscoveryOpt,
 			},
 		},

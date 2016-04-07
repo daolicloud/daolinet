@@ -28,10 +28,10 @@ func parseAddr(addr string) (string, string) {
 }
 
 func agent(c *cli.Context) {
-	var (
+	/*var (
 		extdev string
 		extip  string
-	)
+	)*/
 	dflag := getDiscovery(c)
 	if dflag == "" {
 		log.Fatalf("discovery required to connect a cluster. See '%s agent --help'.", c.App.Name)
@@ -43,7 +43,7 @@ func agent(c *cli.Context) {
 		log.Fatalf("error to get ovs datapath: %v", err)
 	}
 
-	intdev, intip := parseAddr(c.String("int-nic"))
+	/*intdev, intip := parseAddr(c.String("int-nic"))
 	if intip == "" {
 		log.Fatal("--int-nic should be of the form nic:ip")
 	}
@@ -56,7 +56,14 @@ func agent(c *cli.Context) {
 		if extip == "" {
 			log.Fatal("--ext-nic should be of the form nic:ip or empty")
 		}
+	}*/
+
+	intdev, intip := parseAddr(c.String("iface"))
+	if intip == "" {
+		log.Fatal("--iface should be the form devname:ip")
 	}
+
+	extdev, extip := intdev, intip
 
 	node := c.String("addr")
 	if node == "" {
