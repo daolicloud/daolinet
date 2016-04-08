@@ -6,7 +6,7 @@ daolinet安装文档
 安装要求
 ----------
 
-使用daolinet可以在docker单机环境和集群环境进行部署和安装，如果在单机环境进行使用请参考[daolinet单机环境安装](DaolinetSingleHost.md)。进行docker集群管理最少使用一个manager节点和一个agent节点。
+使用daolinet可以在docker单机环境和集群环境进行部署和安装。进行docker集群管理最少使用一个manager节点和一个agent节点。
 
 安装daolinet前所有节点必须进行如下环境准备：
 
@@ -187,5 +187,5 @@ OpenVswitch安装请执行以下命令，详细安装请参考[How to Install Op
 
 ## 总结
 
-以上为daolinet安装步骤，下一步，请参考[用户手册文档](UserGuide.md)。
+以上为daolinet安装步骤，下一步，请参考[用户手册文档](../daolicloud/daolictl/UserGuide.md)。
 
